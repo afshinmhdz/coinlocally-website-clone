@@ -8,7 +8,18 @@ $newButtonBackgroundColor:#3c3c24;
 $more_trade_color1:#f7931a;
 $navbarHoverBackgroundColor:#fff9eb;
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: 'Vazirmatn', sans-serif;
-    
+    max-width: 550px;
+    margin: 0 auto;
+}
+@mixin flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

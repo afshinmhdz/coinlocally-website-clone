@@ -1,3 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Vazirmatn", sans-serif;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid rgb(73, 54, 54);
+}
+.navbar li {
+  list-style: none;
+}
+.navbar .main_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  gap: 24px;
+  cursor: pointer;
+}
+.navbar .main_list .main_logo {
+  width: 130px;
+}
+.navbar .right_list {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.topSec {
+  background-color: #132d20;
 }/*# sourceMappingURL=main.css.map */
