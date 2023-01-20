@@ -7,6 +7,7 @@ $navbarFontColor:#333333;
 $newButtonBackgroundColor:#3c3c24;
 $more_trade_color1:#f7931a;
 $navbarHoverBackgroundColor:#fff9eb;
+$downlaodBtnBackgroundColor:#297F58;
 
 *{
     margin: 0;
@@ -15,8 +16,11 @@ $navbarHoverBackgroundColor:#fff9eb;
 }
 body{
     font-family: 'Vazirmatn', sans-serif;
-    max-width: 550px;
+    min-width: 390px;
     margin: 0 auto;
+}
+#root{
+    height: 5284px;
 }
 @mixin flex{
     display: flex;

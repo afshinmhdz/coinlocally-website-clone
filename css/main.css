@@ -6,8 +6,12 @@
 
 body {
   font-family: "Vazirmatn", sans-serif;
-  max-width: 550px;
+  min-width: 390px;
   margin: 0 auto;
+}
+
+#root {
+  height: 5284px;
 }
 
 .navbar {
@@ -16,7 +20,6 @@ body {
   align-items: center;
   width: 100%;
   height: 64px;
-  border-bottom: 1px solid rgb(73, 54, 54);
 }
 .navbar li {
   list-style: none;
@@ -41,4 +44,154 @@ body {
 
 .topSec {
   background-color: #132d20;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  border-bottom: 1px solid rgb(54, 63, 73);
+}
+
+.mainHeader {
+  background: radial-gradient(51.38% 53.18% at 50% 50.12%, rgb(32, 77, 53) 0%, rgb(19, 45, 32) 100%);
+  position: relative;
+  top: -17px;
+}
+.mainHeader img {
+  max-width: 100%;
+  z-index: 0;
+}
+.mainHeader h1 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  position: relative;
+  width: 60%;
+  padding-top: 40px;
+}
+.mainHeader h1 .header_hat {
+  position: absolute;
+  height: 28px;
+  top: 35px;
+  left: -9px;
+}
+.mainHeader h2 {
+  font-size: 1rem;
+  color: rgb(204, 204, 204);
+  margin: 16px auto 24px 40px;
+  line-height: 19px;
+  width: 60%;
+  font-weight: 300;
+}
+.mainHeader h1,
+.mainHeader h2,
+.mainHeader section {
+  position: relative;
+  z-index: 1;
+  width: 60%;
+  margin: 0px 0px 16px 40px;
+}
+.mainHeader .container_bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.mainHeader .bnbHanger {
+  position: absolute;
+  height: 91px;
+  width: 55px;
+  right: 30px;
+  top: 17px;
+}
+.mainHeader .topRightHangerMini {
+  position: absolute;
+  right: 0;
+  width: 34px;
+  top: 15px;
+  height: 150px;
+}
+.mainHeader .bottomRightSvg {
+  height: 110px;
+  width: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  height: auto;
+  width: 50%;
+}
+.mainHeader .bottomLeftSvg {
+  height: 180px;
+  position: absolute;
+  bottom: 0px;
+}
+.mainHeader .action {
+  padding-bottom: 88px;
+}
+.mainHeader .action button {
+  background-color: #fcd535;
+  border: none;
+  padding: 10px 24px 8px;
+  border-radius: 8px;
+  height: 40px;
+  min-width: 90px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+}
+.mainHeader .action input {
+  height: 48px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  width: 298px;
+  padding: 16px 24px 14px;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.mainHeader .main_background_image {
+  width: 100%;
+  opacity: rgba(0, 0, 0, 0.53);
+  background-color: #132d20;
+}
+
+.downloads {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.downloads .downloadIcons {
+  width: 48px;
+  background-color: #297F58;
+  border-radius: 8px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.downloads .downloadIcons .downloadSvg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 700px) {
+  .centerHanger,
+.bitcoinHangerSvg,
+.topRightHanger,
+.topLeftHangerSvg,
+.downloads {
+    display: none;
+  }
+  .actions input {
+    display: none;
+  }
+}
+@media (min-width: 700px) {
+  .topRightHangerMini {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
