@@ -1,4 +1,5 @@
 $buttonColor:#fcd535;
+$white:#fff;
 $loginButtonFontColor:#fbbb20;
 $loginButtonBorderColor:#fcd535;
 $apple_googlePlay_androidBackgroundColorButton:#297f58;
@@ -26,4 +27,20 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+@mixin button($width,$backgroundColor,$fontColor,$border){
+    background-color: $backgroundColor;
+    border: $border;
+    padding: 10px 24px 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    height: 40px;
+    min-width: $width;
+    color: $fontColor;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+   
+    cursor: pointer;
 }

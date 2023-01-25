@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="" id="root">
@@ -36,11 +37,11 @@
             </li>
           </ul>
           <ul class="right_list">
-            <li class="mobile_icon">
+            <li class="mobile_icon hamburgerMenu">
               <img
                 src="./image/SVG/hamburgerMenu.svg"
                 alt="Hamburger Menu"
-                id="hamburgerMenu"
+                
               />
             </li>
           </ul>
@@ -93,7 +94,7 @@
               class="mirror"
               value=""
             />
-            <button class="signupBtn">Sign Up Now</button>
+            <button class="button">Sign Up Now</button>
           </div>
           <div class="downloads">
             <a href="" class="downloadIcons appleIcon"
@@ -114,7 +115,15 @@
           </div>
         </section>
       </header>
+      <div class="mobileNavbar">
+        <div class="back_arrow">
+          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        </div>
+        <button class="button registerBtn">Register</button>
+        <button class="button loginBtn">Login</button>
+      </div>
       <!--navbar & top section end -->
     </div>
+    <script src="./app.js" defer></script>
   </body>
 </html>
