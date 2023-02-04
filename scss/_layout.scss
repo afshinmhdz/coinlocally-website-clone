@@ -1,13 +1,31 @@
+::-webkit-scrollbar {
+  width: 5px;
+  background: #ebebeb;
+}
+
+.active1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.53);
+  width: 100%;
+  height: 100vh;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.2s linear 0s;
+}
+
 .topSec {
   background-color: #132d20;
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 1;
   border-bottom: 1px solid rgb(54, 63, 73);
   .navbar {
     @include flex;
     width: 100%;
     height: 64px;
+    padding: 0px 1.5rem;
     li {
       list-style: none;
     }
@@ -22,9 +40,13 @@
     }
     .right_list {
       display: flex;
-      justify-content: flex-end;
-      padding-right: 1rem;
+      justify-content: center;
+      align-items: center;
+      // padding-right: 1.5rem;
       cursor: pointer;
+    }
+    .hamburgerMenu {
+      @include flex;
     }
   }
 }
@@ -127,13 +149,18 @@
   }
 }
 .button {
-  @include button(90px,$buttonColor,black,none);
+  @include button(90px, $buttonColor, black, none);
 }
 .registerBtn {
-  @include button(100%,$buttonColor,black,none);
+  @include button(100%, $buttonColor, black, none);
 }
 .loginBtn {
-  @include button(100%,transparent,$loginButtonFontColor,1.5px solid $loginButtonBorderColor);
+  @include button(
+    100%,
+    transparent,
+    $loginButtonFontColor,
+    1.5px solid $loginButtonBorderColor
+  );
 }
 .downloads {
   @include flex;
@@ -173,15 +200,15 @@
     margin-bottom: 20px;
     cursor: pointer;
   }
-  ul{
+  ul {
     padding: 30px 0px 30px 0px;
   }
-  ul li{
+  ul li {
     list-style: none;
     padding: 15px;
     border-radius: 8px;
   }
-  ul p{
+  ul p {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -189,43 +216,84 @@
     border-radius: 8px;
     transition: all 0.1s linear 0s;
     cursor: pointer;
-    height: 48px;
-    font-size: 1rem;
   }
-  ul li,p{
-    &:hover{
+  ul li,
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    &:hover {
       background-color: rgb(255, 249, 235);
     }
   }
-  a{
+  a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     display: flex;
     align-items: flex-start;
     border-radius: 8px;
   }
+  
   .submenu{
     display: none;
-  }
-  .hamburgerStatus{
-    display: inline;
-    color: rgb(251, 187, 32);
-    background-color: rgb(254, 245, 205);
-    padding: 5px 10px 2px;
-    border-radius: 5px;
-    font-size: 0.7rem;
-    position: relative;
-    top: -1px;
-    font-weight: 700;
-    margin-left: 8px;
-  }
-  hr{
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(221, 221, 221), rgba(255, 255, 255, 0));
-    display: block;
+    // overflow: hidden;
+
+    .open {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    
+      a{
+        width: 100%;
+        padding: 10px 40px;
+        font-weight: 200;
+        transition: all 0.5s cubic-bezier(0, 0, 0.2, 1) 0s;
+        &:hover {
+          background-color: rgb(255, 249, 235);
+          color: rgb(251, 187, 32);
+        }
+      }
+    
+      #soon {
+        color: rgb(165, 167, 169);
+        background-color: rgb(241, 241, 241);
+        padding: 5px 10px 2px;
+        border-radius: 5px;
+        font-size: 0.7rem;
+        position: relative;
+        top: -1px;
+        font-weight: 700;
+        margin-left: 8px;
+      }
+    }
     
   }
+}
+.hamburgerStatus {
+  display: inline;
+  color: rgb(251, 187, 32);
+  background-color: rgb(254, 245, 205);
+  padding: 5px 10px 2px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  position: relative;
+  top: -1px;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgb(221, 221, 221),
+    rgba(255, 255, 255, 0)
+  );
+  display: block;
 }
 
 @media (max-width: 700px) {

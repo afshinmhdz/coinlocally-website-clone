@@ -14,12 +14,29 @@ body {
   height: 5284px;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background: #ebebeb;
+}
+
+.active1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.53);
+  width: 100%;
+  height: 100vh;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.2s linear 0s;
+}
+
 .topSec {
   background-color: #132d20;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 1;
   border-bottom: 1px solid rgb(54, 63, 73);
 }
 .topSec .navbar {
@@ -28,6 +45,7 @@ body {
   align-items: center;
   width: 100%;
   height: 64px;
+  padding: 0px 1.5rem;
 }
 .topSec .navbar li {
   list-style: none;
@@ -45,9 +63,14 @@ body {
 }
 .topSec .navbar .right_list {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 1rem;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+}
+.topSec .navbar .hamburgerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .mainHeader {
@@ -249,10 +272,14 @@ body {
   border-radius: 8px;
   transition: all 0.1s linear 0s;
   cursor: pointer;
-  height: 48px;
-  font-size: 1rem;
 }
-.mobileNavbar ul li:hover, .mobileNavbar p:hover {
+.mobileNavbar ul li,
+.mobileNavbar p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.mobileNavbar ul li:hover,
+.mobileNavbar p:hover {
   background-color: rgb(255, 249, 235);
 }
 .mobileNavbar a {
@@ -265,7 +292,37 @@ body {
 .mobileNavbar .submenu {
   display: none;
 }
-.mobileNavbar .hamburgerStatus {
+.mobileNavbar .submenu .open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+.mobileNavbar .submenu .open a {
+  width: 100%;
+  padding: 10px 40px;
+  font-weight: 200;
+  transition: all 0.5s cubic-bezier(0, 0, 0.2, 1) 0s;
+}
+.mobileNavbar .submenu .open a:hover {
+  background-color: rgb(255, 249, 235);
+  color: rgb(251, 187, 32);
+}
+.mobileNavbar .submenu .open #soon {
+  color: rgb(165, 167, 169);
+  background-color: rgb(241, 241, 241);
+  padding: 5px 10px 2px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  position: relative;
+  top: -1px;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.hamburgerStatus {
   display: inline;
   color: rgb(251, 187, 32);
   background-color: rgb(254, 245, 205);
@@ -277,7 +334,8 @@ body {
   font-weight: 700;
   margin-left: 8px;
 }
-.mobileNavbar hr {
+
+hr {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(221, 221, 221), rgba(255, 255, 255, 0));
