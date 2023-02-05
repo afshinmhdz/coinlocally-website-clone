@@ -289,38 +289,6 @@ body {
   align-items: flex-start;
   border-radius: 8px;
 }
-.mobileNavbar .submenu {
-  display: none;
-}
-.mobileNavbar .submenu .open {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-}
-.mobileNavbar .submenu .open a {
-  width: 100%;
-  padding: 10px 40px;
-  font-weight: 200;
-  transition: all 0.5s cubic-bezier(0, 0, 0.2, 1) 0s;
-}
-.mobileNavbar .submenu .open a:hover {
-  background-color: rgb(255, 249, 235);
-  color: rgb(251, 187, 32);
-}
-.mobileNavbar .submenu .open #soon {
-  color: rgb(165, 167, 169);
-  background-color: rgb(241, 241, 241);
-  padding: 5px 10px 2px;
-  border-radius: 5px;
-  font-size: 0.7rem;
-  position: relative;
-  top: -1px;
-  font-weight: 700;
-  margin-left: 8px;
-}
 
 .hamburgerStatus {
   display: inline;
@@ -340,6 +308,40 @@ hr {
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(221, 221, 221), rgba(255, 255, 255, 0));
   display: block;
+}
+
+.submenu {
+  display: none;
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+.open a {
+  width: 100%;
+  padding: 10px 40px;
+  font-weight: 200;
+  transition: all 0.5s cubic-bezier(0, 0, 0.2, 1) 0s;
+}
+.open a:hover {
+  background-color: rgb(255, 249, 235);
+  color: rgb(251, 187, 32);
+}
+.open #soon {
+  color: rgb(165, 167, 169);
+  background-color: rgb(241, 241, 241);
+  padding: 5px 10px 2px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  position: relative;
+  top: -1px;
+  font-weight: 700;
+  margin-left: 8px;
 }
 
 @media (max-width: 700px) {

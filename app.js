@@ -20,18 +20,21 @@ backArrowNavbar.addEventListener("click", () => {
 //END ---------FOR HAMBURGER MENU SHOW AND HIDE--------------
 
 //START ---------FOR SUBMENU SHOW AND HIDE--------------
-const hamburgerArrowDown = document.querySelector(".fa-angle-down");
-const submenu = document.querySelector("#submenu1");
+const hamburgerArrowDown = document.querySelectorAll(".fa-angle-down");
+const submenu = document.querySelectorAll(".submenu");
 
+for (const listItemEl of hamburgerArrowDown) {
+  listItemEl.addEventListener("click", () => {
+    for (const listItem of submenu) {
+      if (listItem.style.display === "none") {
+        listItem.style.display = "block";
+        listItem.className="open";
+      } else {
+         listItem.style.display = "none";
+        listItem.className="submenu";
+      }
+    }
+  });
+}
 
-hamburgerArrowDown.addEventListener("click", () => {
-  if (submenu.style.display === "none") {
-   // submenu.style.display = "block";
-    
-    submenu.classList.add="open";
-    
-  } else {
-     //submenu.style.display = "none";
-  }
-});
 //END ---------FOR SUBMENU SHOW AND HIDE--------------
