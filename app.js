@@ -28,13 +28,30 @@ for (const listItemEl of hamburgerArrowDown) {
     for (const listItem of submenu) {
       if (listItem.style.display === "none") {
         listItem.style.display = "block";
-        listItem.className="open";
+        listItem.className = "open";
       } else {
-         listItem.style.display = "none";
-        listItem.className="submenu";
+        listItem.style.display = "none";
+        listItem.className = "submenu";
       }
     }
   });
 }
 
 //END ---------FOR SUBMENU SHOW AND HIDE--------------
+
+//START ---------FOR DARK AND LIGHT THEME --------------
+const themeBtn = document.querySelector(".theme_mode img");
+const themeSection = document.querySelector(".darkLightTheme");
+const root = document.getElementById("root");
+const mainHeader = document.querySelector(".mainHeader");
+const topSec = document.querySelector(".topSec");
+themeBtn.addEventListener("click", () => {
+  themeSection.style.color = "white";
+  mobileNavbar.style.backgroundColor = "rgb(53, 62, 71)";
+  root.style.backgroundColor = "rgba(0, 0, 0, 0.53)";
+  mainHeader.style.background = "rgba(0, 0, 0, 0.53)";
+  topSec.style.background = "rgb(31, 34, 41)";
+  // background-color: rgb(60, 69, 80);
+});
+
+//END ---------FOR DARK AND LIGHT THEME --------------

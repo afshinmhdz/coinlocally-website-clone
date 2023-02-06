@@ -22,7 +22,7 @@
   z-index: 1;
   border-bottom: 1px solid rgb(54, 63, 73);
   .navbar {
-    @include flex;
+    @include flexSBC;
     width: 100%;
     height: 64px;
     padding: 0px 1.5rem;
@@ -30,7 +30,7 @@
       list-style: none;
     }
     .main_list {
-      @include flex;
+      @include flexSBC;
       padding-left: 1rem;
       gap: 24px;
       cursor: pointer;
@@ -39,14 +39,11 @@
       }
     }
     .right_list {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      // padding-right: 1.5rem;
+      @include flexCC;
       cursor: pointer;
     }
     .hamburgerMenu {
-      @include flex;
+      @include flexSBC;
     }
   }
 }
@@ -163,15 +160,13 @@
   );
 }
 .downloads {
-  @include flex;
+  @include flexSBC;
   .downloadIcons {
     width: 48px;
     background-color: $downlaodBtnBackgroundColor;
     border-radius: 8px;
     height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexSBC;
     .downloadSvg {
       width: 24px;
       height: 24px;
@@ -209,9 +204,7 @@
     border-radius: 8px;
   }
   ul p {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexSBC;
     padding: 15px 20px 13px 15px;
     border-radius: 8px;
     transition: all 0.1s linear 0s;
@@ -233,8 +226,65 @@
     border-radius: 8px;
   }
   
-  
+  .theme_mode{
+    @include flexSBC;
+    padding: 15px 15px 32px;
+    div{
+      background-color: rgb(233, 233, 237);
+      width: 56px;
+      height: 32px;
+      border-radius: 50px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    span{
+      background-color: rgb(56, 58, 72);
+      position: absolute;
+      left: 5px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50px;
+      @include flexCC;
+      transition: all 0.5s cubic-bezier(0,0,0.2,1)0s;
+    }
+    img{
+      width: 16px;
+    }
+  }
+  .app_field{
+    a{
+      @include flexCC;
+      margin-bottom: 10px;
+      background-color: rgb(233, 233, 237);
+      border-radius: 8px;
+      padding: 10px;
+      width: 100%;
+      text-decoration: none;
+      span{
+        min-width: 42px;
+        min-height: 42px;
+        @include flexCC;
+        background-color: white;
+        margin-right: 10px;
+        border-radius: 5px;
+      }
+      div{
+        width: 100%;
+        color: #000;
+      }
+      b{
+        font-size: 0.9rem;
+      }
+      p{
+        font-size: 0.8rem;
+        font-weight: 200;
+      }
+    }
+  }
 }
+
 .hamburgerStatus {
   display: inline;
   color: rgb(251, 187, 32);

@@ -16,7 +16,13 @@
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="active" style></div>
@@ -39,11 +45,7 @@
           </ul>
           <ul class="right_list">
             <li class="mobile_icon hamburgerMenu">
-              <img
-                src="./image/SVG/hamburgerMenu.svg"
-                alt="Hamburger Menu"
-                
-              />
+              <img src="./image/SVG/hamburgerMenu.svg" alt="Hamburger Menu" />
             </li>
           </ul>
         </nav>
@@ -116,54 +118,105 @@
           </div>
         </section>
       </header>
-      
-      <div class="mobileNavbar" style="display: none;">
+
+      <div class="mobileNavbar" style="display: none">
         <div class="back_arrow">
           <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
         </div>
         <button class="button registerBtn">Register</button>
         <button class="button loginBtn">Login</button>
-        <ul>
-          <div class="hamburger buyCrypto" >
-            <p>Buy Crypto <i class="fa fa-angle-down" id="hamburgerArrowDown"></i></p>
-            <div class="submenu"  id="submenu1" style="display: none;">
-              <a href="https://coinlocally.com/buy-crypto/binance">Binance</a>
-              <a href="https://coinlocally.com/buy-crypto/mercuryo">Mercuryo</a>
+        <div class="darkLightTheme">
+          <ul>
+            <div class="hamburger buyCrypto">
+              <p>
+                Buy Crypto
+                <i class="fa fa-angle-down" id="hamburgerArrowDown"></i>
+              </p>
+              <div class="submenu" id="submenu1" style="display: none">
+                <a href="https://coinlocally.com/buy-crypto/binance">Binance</a>
+                <a href="https://coinlocally.com/buy-crypto/mercuryo">Mercuryo</a>
+              </div>
             </div>
-          </div>
-          <li>
-            <a href="">Market</a>
-          </li>
-          <li><a href="">Spot</a></li>
-          <div class="hamburger derivatives">
-            <p>Derivatives <i class="fa fa-angle-down" id="hamburgerArrowDown" role="button"></i></p>
-            <div class="submenu" id="submenu1" style="display: none;">
-              <a href="">Futures Overview</a>
-              <a href="">USDⓈ-M Futures</a>
-              <a href="">Coin-M Futures <div color="#A5A7A9" id="soon">Soon...</div></a>
-              <a href="">Top Trader <div class="hamburgerStatus" color="#fbbb20">New</div></a>
-              <a href="">Tournament</a>
-              <a href="">Leveraged Token</a>
-              <a href="">Demo Trading <div class=""color="#fbbb20">New</div></a>
+            <li>
+              <a href="">Market</a>
+            </li>
+            <li><a href="">Spot</a></li>
+            <div class="hamburger derivatives">
+              <p>
+                Derivatives
+                <i
+                  class="fa fa-angle-down"
+                  id="hamburgerArrowDown"
+                  role="button"
+                ></i>
+              </p>
+              <div class="submenu" id="submenu1" style="display: none">
+                <a href="">Futures Overview</a>
+                <a href="">USDⓈ-M Futures</a>
+                <a href=""
+                  >Coin-M Futures
+                  <div color="#A5A7A9" id="soon">Soon...</div></a
+                >
+                <a href=""
+                  >Top Trader
+                  <div class="hamburgerStatus" color="#fbbb20">New</div></a
+                >
+                <a href="">Tournament</a>
+                <a href="">Leveraged Token</a>
+                <a href=""
+                  >Demo Trading
+                  <div class="" color="#fbbb20">New</div></a
+                >
+              </div>
             </div>
-          </div>
-          <div class="hamburger earn">
-            <p>Earn <i class="fa fa-angle-down" id="hamburgerArrowDown"></i></p>
-            <div class="submenu" style="display: none;">
-              <a href="">Saving</a>
-              <a href="">Airdrop</a>
+            <div class="hamburger earn">
+              <p>Earn <i class="fa fa-angle-down" id="hamburgerArrowDown"></i></p>
+              <div class="submenu" style="display: none">
+                <a href="">Saving</a>
+                <a href="">Airdrop</a>
+              </div>
             </div>
+            <li>
+              <a href=""
+                >NFT
+                <div class="hamburgerStatus" color="#fbbb20">New</div></a
+              >
+            </li>
+            <li><a href="">Announcement</a></li>
+          </ul>
+          <hr />
+          <div class="theme_mode">
+            Theme
+            <div><span><img src="./image/SVG/moonWhite.svg" alt=""></span></div>
           </div>
-          <li><a href="">NFT <div class="hamburgerStatus"color="#fbbb20">New</div></a></li>
-          <li><a href="">Announcement</a></li>
-        </ul>
-        <hr>
-
+          <div class="app_field">
+            <a href="https://play.google.com/store/apps/details?id=com.coinlocally.android&hl=en&gl=TR&pli=1" class="card_field">
+              <span>
+                <img src="./image/SVG/googlePlayLogo.svg" alt="">
+              </span>
+              <div>
+                <b>Coinlocally App</b>
+                <p>Download App On Play Store</p>
+              </div>
+              <img src="./image/SVG/download.svg" alt="">
+            </a>
+            <a href="https://apps.apple.com/us/app/coinlocally/id1495966572" class="card_field">
+              <span>
+                <img src="./image/SVG/appStore.svg" alt="">
+              </span>
+              <div>
+                <b>Coinlocally App</b>
+                <p>Download App On Play Store</p>
+              </div>
+              <img src="./image/SVG/download1.svg" alt="">
+            </a>
+          </div>
+        </div>
       </div>
       <!--navbar & top section end -->
       
     </div>
-   
+
     <script src="./app.js" defer></script>
   </body>
 </html>

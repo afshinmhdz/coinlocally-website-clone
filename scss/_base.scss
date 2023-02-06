@@ -23,10 +23,15 @@ body{
 #root{
     height: 5284px;
 }
-@mixin flex{
+@mixin flexSBC{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+@mixin flexCC{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @mixin button($width,$backgroundColor,$fontColor,$border){
     background-color: $backgroundColor;
