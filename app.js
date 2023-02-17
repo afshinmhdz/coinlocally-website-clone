@@ -45,13 +45,15 @@ const themeSection = document.querySelector(".darkLightTheme");
 const root = document.getElementById("root");
 const mainHeader = document.querySelector(".mainHeader");
 const topSec = document.querySelector(".topSec");
+const theme_mode_transition = document.querySelector(".theme_mode span");
+
 themeBtn.addEventListener("click", () => {
-  themeSection.style.color = "white";
+  themeSection.className = "darkTheme";
   mobileNavbar.style.backgroundColor = "rgb(53, 62, 71)";
+  theme_mode_transition.className="theme_mode_transition";
   root.style.backgroundColor = "rgba(0, 0, 0, 0.53)";
   mainHeader.style.background = "rgba(0, 0, 0, 0.53)";
   topSec.style.background = "rgb(31, 34, 41)";
-  // background-color: rgb(60, 69, 80);
 });
 
 //END ---------FOR DARK AND LIGHT THEME --------------

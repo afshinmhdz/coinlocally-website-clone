@@ -33,7 +33,6 @@ body {
 
 .topSec {
   background-color: #132d20;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -407,12 +406,31 @@ hr {
   margin-left: 8px;
 }
 
+.darkTheme {
+  color: white;
+}
+.darkTheme li:hover {
+  color: green;
+}
+.darkTheme a {
+  color: white;
+}
+.darkTheme a:hover {
+  color: green;
+}
+
+.theme_mode_transition {
+  position: absolute;
+  right: 5px;
+  transition: 1s;
+}
+
 @media (max-width: 700px) {
   .centerHanger,
-.bitcoinHangerSvg,
-.topRightHanger,
-.topLeftHangerSvg,
-.downloads {
+  .bitcoinHangerSvg,
+  .topRightHanger,
+  .topLeftHangerSvg,
+  .downloads {
     display: none;
   }
   .actions input {

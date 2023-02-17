@@ -225,11 +225,11 @@
     align-items: flex-start;
     border-radius: 8px;
   }
-  
-  .theme_mode{
+
+  .theme_mode {
     @include flexSBC;
     padding: 15px 15px 32px;
-    div{
+    div {
       background-color: rgb(233, 233, 237);
       width: 56px;
       height: 32px;
@@ -239,7 +239,7 @@
       align-items: center;
       cursor: pointer;
     }
-    span{
+    span {
       background-color: rgb(56, 58, 72);
       position: absolute;
       left: 5px;
@@ -247,14 +247,14 @@
       height: 24px;
       border-radius: 50px;
       @include flexCC;
-      transition: all 0.5s cubic-bezier(0,0,0.2,1)0s;
+      transition: all 0.5s cubic-bezier(0, 0, 0.2, 1) 0s;
     }
-    img{
+    img {
       width: 16px;
     }
   }
-  .app_field{
-    a{
+  .app_field {
+    a {
       @include flexCC;
       margin-bottom: 10px;
       background-color: rgb(233, 233, 237);
@@ -262,7 +262,7 @@
       padding: 10px;
       width: 100%;
       text-decoration: none;
-      span{
+      span {
         min-width: 42px;
         min-height: 42px;
         @include flexCC;
@@ -270,14 +270,14 @@
         margin-right: 10px;
         border-radius: 5px;
       }
-      div{
+      div {
         width: 100%;
         color: #000;
       }
-      b{
+      b {
         font-size: 0.9rem;
       }
-      p{
+      p {
         font-size: 0.8rem;
         font-weight: 200;
       }
@@ -309,10 +309,10 @@ hr {
   );
   display: block;
 }
-.submenu{
+.submenu {
   display: none;
 }
-.open{
+.open {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -320,7 +320,7 @@ hr {
   border-radius: 8px;
   font-size: 0.9rem;
 
-  a{
+  a {
     width: 100%;
     padding: 10px 40px;
     font-weight: 200;
@@ -343,6 +343,26 @@ hr {
     margin-left: 8px;
   }
 }
+.darkTheme {
+  color: white;
+  li {
+    &:hover {
+      color: green;
+    }
+  }
+  a {
+    color: white;
+    &:hover {
+      color: green;
+    }
+  }
+}
+.theme_mode_transition{
+  position: absolute;
+  right:5px;
+  transition:1s;
+}
+
 @media (max-width: 700px) {
   .centerHanger,
   .bitcoinHangerSvg,
@@ -351,7 +371,6 @@ hr {
   .downloads {
     display: none;
   }
-
   .actions {
     input {
       display: none;
